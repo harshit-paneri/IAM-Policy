@@ -1,0 +1,96 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Deny",
+			"Action": [
+				"rds:CreateDBInstance",
+				"rds:CreateDBCluster"
+			],
+			"Resource": "arn:aws:rds:*:*:*",
+			"Condition": {
+				"Null": {
+					"aws:RequestTag/Env": "true"
+				}
+			}
+		},
+		{
+			"Effect": "Deny",
+			"Action": [
+				"rds:CreateDBInstance",
+				"rds:CreateDBCluster"
+			],
+			"Resource": "arn:aws:rds:*:*:*",
+			"Condition": {
+				"Null": {
+					"aws:RequestTag/Client": "true"
+				}
+			}
+		},
+		{
+			"Effect": "Deny",
+			"Action": [
+				"rds:CreateDBInstance",
+				"rds:CreateDBCluster"
+			],
+			"Resource": "arn:aws:rds:*:*:*",
+			"Condition": {
+				"Null": {
+					"aws:RequestTag/Project": "true"
+				}
+			}
+		},
+		{
+			"Effect": "Deny",
+			"Action": [
+				"rds:CreateDBInstance",
+				"rds:CreateDBCluster"
+			],
+			"Resource": "arn:aws:rds:*:*:*",
+			"Condition": {
+				"Null": {
+					"aws:RequestTag/App": "true"
+				}
+			}
+		},
+		{
+			"Effect": "Deny",
+			"Action": [
+				"rds:CreateDBInstance",
+				"rds:CreateDBCluster"
+			],
+			"Resource": "arn:aws:rds:*:*:*",
+			"Condition": {
+				"Null": {
+					"aws:RequestTag/Scope": "true"
+				}
+			}
+		},
+		{
+			"Effect": "Deny",
+			"Action": [
+				"rds:CreateDBInstance",
+				"rds:CreateDBCluster"
+			],
+			"Resource": "arn:aws:rds:*:*:*",
+			"Condition": {
+				"Null": {
+					"aws:RequestTag/Name": "true"
+				}
+			}
+		},
+		{
+			"Effect": "Deny",
+			"Action": [
+				"rds:CreateDBInstance",
+				"rds:CreateDBCluster"
+			],
+			"Resource": "arn:aws:rds:*:*:*",
+			"Condition": {
+				"Null": {
+					"aws:RequestTag/Team": "true"
+				}
+			}
+		}
+	]
+}
